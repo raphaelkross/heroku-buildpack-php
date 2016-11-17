@@ -128,7 +128,7 @@ curl -O http://pear.php.net/go-pear.phar
 echo -e "\n" > /app/.heroku/php-min/bin/php -d detect_unicode=0 go-pear.phar
 
 echo "Installing OCI8 V3..."
-echo instantclient,$build_dir/vendor/instantclient_12_1 | pecl install oci8 
+echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php-min/bin/pecl install oci8 
 
 status "Installing platform packages..."
 

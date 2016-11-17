@@ -123,8 +123,11 @@ echo "export PATH=/app/.heroku/php/bin:\$PATH:/app/$composer_bindir" > $bp_dir/e
 mkdir -p $build_dir/.profile.d
 echo "export PATH=\$HOME/.heroku/php/bin:\$PATH:\$HOME/$composer_bindir" > $build_dir/.profile.d/100-composer.sh
 
+echo "Dump"
+ls /app/.heroku/php-min/bin/
+
 echo "Installing OCI8 V3..."
-echo instantclient,$build_dir/vendor/instantclient_12_1 | pecl install oci8 
+echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php-min/bin/pecl install oci8 
 
 status "Installing platform packages..."
 

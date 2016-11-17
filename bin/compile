@@ -124,8 +124,8 @@ mkdir -p $build_dir/.profile.d
 echo "export PATH=\$HOME/.heroku/php/bin:\$PATH:\$HOME/$composer_bindir" > $build_dir/.profile.d/100-composer.sh
 
 echo "Installing PEAR/PECL"
-curl -O http://pear.php.net/go-pear.phar
-echo -e "\n" > /app/.heroku/php-min/bin/php -d detect_unicode=0 go-pear.phar
+curl -O http://pear.php.net/go-pear.phar > /app/.heroku/php-min/bin/
+echo -e "\n" > /app/.heroku/php-min/bin/php -d detect_unicode=0 /app/.heroku/php-min/bin/go-pear.phar
 
 echo "Installing OCI8 V3..."
 echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php-min/bin/pecl install oci8 

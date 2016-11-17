@@ -127,6 +127,10 @@ echo "Installing PEAR/PECL"
 curl -O http://pear.php.net/go-pear.phar > /app/.heroku/php-min/bin/go-pear.phar
 echo -e "\n" > /app/.heroku/php-min/bin/php -d detect_unicode=0 /app/.heroku/php-min/bin/go-pear.phar
 
+echo "Check pecl"
+which pecl
+which pear
+
 echo "Installing OCI8 V3..."
 echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php-min/bin/pecl install oci8 
 

@@ -40,7 +40,7 @@ export PATH=${OUT_PREFIX}/bin:$PATH
     --disable-dom \
     --disable-libxml \
     --with-openssl \
-    --without-pear \
+    --with-pear \
     --disable-pdo \
     --without-pdo-sqlite \
     --with-readline \

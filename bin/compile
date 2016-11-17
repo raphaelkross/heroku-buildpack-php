@@ -133,11 +133,11 @@ ls /app
 which pear
 which pecl
 
-echo "Installing OCI8 V3..."
-echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php/bin/pecl install oci8
+#echo "Installing OCI8 V3..."
+#echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php/bin/pecl install oci8
 
-echo "Installing OCI8 V4..."
-echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php/bin/pear install pecl/oci8
+#echo "Installing OCI8 V4..."
+#echo instantclient,$build_dir/vendor/instantclient_12_1 | /app/.heroku/php/bin/pear install pecl/oci8
 
 status "Installing platform packages..."
 
